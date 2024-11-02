@@ -52,3 +52,7 @@ for element in raw_pdf_elements:
     elif "ListItem" in str(type(element)):
         ListItem.append(str(element))
 ```
+
+## Example Output
+1. **Table**: Table[0] for tables extracted
+2. **NarrativeText**: NarrativeText for narrative texts
