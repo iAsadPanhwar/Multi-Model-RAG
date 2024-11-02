@@ -35,3 +35,20 @@ raw_pdf_elements = partition_pdf(
     extract_image_block_output_dir="extracted_data"
 )
 ```
+3. **Categorize Extracted Content:**
+```bash
+img = []
+Table = []
+NarrativeText = []
+ListItem = []
+
+for element in raw_pdf_elements:
+    if "Image" in str(type(element)):
+        img.append(str(element))
+    elif "NarrativeText" in str(type(element)):
+        NarrativeText.append(str(element))
+    elif "Table" in str(type(element)):
+        Table.append(str(element))
+    elif "ListItem" in str(type(element)):
+        ListItem.append(str(element))
+```
